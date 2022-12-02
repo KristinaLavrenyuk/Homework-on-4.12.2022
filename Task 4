@@ -1,0 +1,24 @@
+
+#include <iostream>
+using namespace std;
+
+struct tim {
+    int second;
+    int minute;
+    int hour;
+}; 
+
+int main()
+{
+    tim time1, time2, time3; int raznica;
+    cin >> time1.hour >> time1.minute >> time1.second >> time2.hour >> time2.minute >> time2.second;
+    raznica = (time1.hour * 60 * 60 + time1.minute * 60 + time1.second) - (time2.hour * 60 * 60 + time2.minute * 60 + time2.second);
+    time3.hour = raznica / 60 / 60;
+    if (time3.hour < 1) time3.hour = 0;
+    time3.minute = (raznica - time3.hour * 60 * 60) / 60;
+    if (time3.minute < 1) time3.minute = 0;
+    time3.second = raznica - (time3.hour * 60 * 60 + time3.minute * 60);
+    if (time3.second < 1) time3.second = 0;
+    cout << time3.hour << " " << time3.minute << " " << time3.second;
+    system("pause");
+}
