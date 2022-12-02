@@ -1,0 +1,17 @@
+
+#include <iostream>
+using namespace std;
+
+struct tim {
+    int second;
+    int minute;
+    int hour;
+};
+
+int main()
+{
+    tim time;
+    cin >> time.second >> time.minute >> time.hour;
+    cout << "Time 1 = " << time.hour * 60 * 60 + time.minute * 60 + time.second << "c" << endl;
+    system("pause");
+}
