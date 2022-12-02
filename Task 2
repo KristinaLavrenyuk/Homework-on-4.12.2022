@@ -1,0 +1,36 @@
+
+#include <iostream>
+using namespace std;
+
+struct agro{
+    char name;
+    int clas;
+    float ocenka;
+    int quanPropusk;
+    int power;
+};
+
+int main()
+{
+    agro schoolBoy, schoolBoyy, schoolBoyyy;
+    int krutoi1, krutoi2, krutoi3;
+    cout << "Name: ";
+    cin >> schoolBoy.name >> schoolBoyy.name >> schoolBoyyy.name;
+    cout << "Class: ";
+    cin >> schoolBoy.clas >> schoolBoyy.clas >> schoolBoyyy.clas;
+    cout << "Grade: ";
+    cin >> schoolBoy.ocenka >> schoolBoyy.ocenka >> schoolBoyyy.ocenka;
+    cout << "Quantity propuskov: ";
+    cin >> schoolBoy.quanPropusk >> schoolBoyy.quanPropusk >> schoolBoyyy.quanPropusk;
+    cout << "Power: ";
+    cin >> schoolBoy.power >> schoolBoyy.power >> schoolBoyyy.power;
+    krutoi1 = schoolBoy.power * schoolBoy.quanPropusk;
+    krutoi2 = schoolBoyy.power * schoolBoyy.quanPropusk;
+    krutoi3 = schoolBoyyy.power * schoolBoyyy.quanPropusk;
+
+    if (krutoi1 > krutoi2 && krutoi1 > krutoi3) cout << schoolBoy.name << endl;
+    else if (krutoi2 > krutoi1 && krutoi2 > krutoi3) cout << schoolBoyy.name << endl;
+    else if (krutoi3 > krutoi2 && krutoi3 > krutoi1) cout << schoolBoyyy.name << endl;
+
+    system("pause");
+}
