@@ -1,0 +1,31 @@
+
+#include <iostream>
+using namespace std;
+
+struct cot{
+    char mur;
+    int lifes;
+    char gender;
+};
+int main()
+{
+    cot cosh, coshh;
+    cout << "Women-cat - g" << " Man-cat - m" << endl;
+    cin >> cosh.lifes >> cosh.gender >> cosh.mur;
+    cin >> coshh.lifes >> coshh.gender >> coshh.mur;
+
+    if (cosh.gender != coshh.gender)
+    {
+        cot coshhh;
+        cout << "Kot sozdan" << endl;
+    }
+    else if (cosh.gender == 'g') cout << cosh.mur << endl << coshh.mur << endl << "Pomurchali" << endl;
+    else if (cosh.gender == 'm')
+    {
+        cosh.lifes -= 1;
+        coshh.lifes -= 1;
+        cout << "-1 life" << endl;
+        cout << cosh.lifes << endl << coshh.lifes;
+    }
+    system("pause");
+}
